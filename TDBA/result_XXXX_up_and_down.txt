@@ -1,0 +1,7 @@
+('====================', 'Autoformer', '***', 'PEMS03', '====================')
+Epoch: 95 | clean MAE: 16.0254, clean RMSE: 25.1807 | attacked MAE: 20.7232, attacked RMSE: 30.4587 | clean MAE: 16.6942, clean RMSE: 26.1226('====================', 'Autoformer', '***', 'PEMS03', '====================')
+Epoch: 96 | clean MAE: 16.0173, clean RMSE: 25.1827 | attacked MAE: 20.7376, attacked RMSE: 30.5016 | clean MAE: 16.6784, clean RMSE: 26.0888('====================', 'FEDformer', '***', 'PEMS03', '====================')
+Epoch: 93 | clean MAE: 16.2737, clean RMSE: 25.5927 | attacked MAE: 20.3181, attacked RMSE: 29.8674 | clean MAE: 16.9933, clean RMSE: 26.5995('====================', 'Autoformer', '***', 'PEMS03', '====================')
+Epoch: 94 | clean MAE: 16.1932, clean RMSE: 25.4091 | attacked MAE: 22.2603, attacked RMSE: 32.6635 | clean MAE: 16.6217, clean RMSE: 26.0942('====================', 'Autoformer', '***', 'PEMS03', '====================')
+Epoch: 95 | clean MAE: 15.9422, clean RMSE: 25.1135 | attacked MAE: 22.3497, attacked RMSE: 33.3308 | clean MAE: 16.3114, clean RMSE: 25.5024('====================', 'Autoformer', '***', 'PEMS03', '====================')
+Epoch: 95 | clean MAE: 16.0390, clean RMSE: 25.2035 | attacked MAE: 20.6786, attacked RMSE: 30.4248 | clean MAE: 16.6392, clean RMSE: 26.0585

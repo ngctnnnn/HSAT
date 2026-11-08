@@ -1,0 +1,6 @@
+# Auto-generated — .remotion/ internals are managed by AdaL
+# Only custom/ is user-facing and version-controlled
+*
+!.gitignore
+!custom/
+!custom/**

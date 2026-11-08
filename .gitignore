@@ -1,0 +1,12 @@
+*.csv
+*.npy
+.idea/deployment.xml
+.idea/deployment.xml
+__pycache__
+backtime/
+*.pth
+data/__MACOSX/
+data/*.zip
+data
+tmp
+*.zip

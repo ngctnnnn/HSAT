@@ -1,0 +1,6 @@
+/home/tanpham/maikhanh/HSATproject-main/jobs/table2/run1/gdn_msat_PEMS03_seed1.sh
+/home/tanpham/maikhanh/HSATproject-main/jobs/table2/run1/usad_hsat_PEMS03_seed1.sh
+/home/tanpham/maikhanh/HSATproject-main/jobs/table2/run1/gdn_msat_Weather_seed1.sh
+/home/tanpham/maikhanh/HSATproject-main/jobs/table2/run1/usad_hsat_Weather_seed1.sh
+/home/tanpham/maikhanh/HSATproject-main/jobs/table2/run1/gdn_msat_ETTm1_seed1.sh
+/home/tanpham/maikhanh/HSATproject-main/jobs/table2/run1/usad_hsat_ETTm1_seed1.sh

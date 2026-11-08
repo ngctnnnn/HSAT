@@ -1,0 +1,12 @@
+/home/tanpham/maikhanh/HSATproject-main/jobs/table2/run1/gdn_backtime_PEMS03_seed1.sh
+/home/tanpham/maikhanh/HSATproject-main/jobs/table2/run1/usad_backtime_PEMS03_seed1.sh
+/home/tanpham/maikhanh/HSATproject-main/jobs/table2/run1/usad_msat_PEMS03_seed1.sh
+/home/tanpham/maikhanh/HSATproject-main/jobs/table2/run1/gdn_hsat_PEMS03_seed1.sh
+/home/tanpham/maikhanh/HSATproject-main/jobs/table2/run1/gdn_backtime_Weather_seed1.sh
+/home/tanpham/maikhanh/HSATproject-main/jobs/table2/run1/usad_backtime_Weather_seed1.sh
+/home/tanpham/maikhanh/HSATproject-main/jobs/table2/run1/usad_msat_Weather_seed1.sh
+/home/tanpham/maikhanh/HSATproject-main/jobs/table2/run1/gdn_hsat_Weather_seed1.sh
+/home/tanpham/maikhanh/HSATproject-main/jobs/table2/run1/gdn_backtime_ETTm1_seed1.sh
+/home/tanpham/maikhanh/HSATproject-main/jobs/table2/run1/usad_backtime_ETTm1_seed1.sh
+/home/tanpham/maikhanh/HSATproject-main/jobs/table2/run1/usad_msat_ETTm1_seed1.sh
+/home/tanpham/maikhanh/HSATproject-main/jobs/table2/run1/gdn_hsat_ETTm1_seed1.sh

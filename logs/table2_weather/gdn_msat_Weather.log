@@ -1,0 +1,27 @@
+shape of data: torch.Size([21, 1, 31617])
+shape of data: torch.Size([21, 1, 10540])
+shape of data: torch.Size([21, 1, 10540])
+[INFO] Exact checkpoint name not found; using closest glob match: ./checkpoints/transferlearning_attacker_Weather_cone_TgrCNN1D_hidden_dim=32_atklr=0.005_globalvslocalratio=-1_warmup=20_Autoformer_clean=False.pth
+shape of data: torch.Size([21, 1, 31617])
+/home/tanpham/maikhanh/HSATproject-main/defense_models/GDN/models/GDN.py:161: UserWarning: The use of `x.T` on tensors of dimension other than 2 to reverse their shape is deprecated and it will throw an error in a future release. Consider `x.mT` to transpose batches of matrices or `x.permute(*torch.arange(x.ndim - 1, -1, -1))` to reverse the dimensions of a tensor. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3614.)
+  gated_i = torch.arange(0, node_num).T.unsqueeze(1).repeat(1, topk_num).flatten().to(device).unsqueeze(0)
+epoch (0 / 50) (Loss:0.01937962, ACU_loss:68.79765390)
+epoch (1 / 50) (Loss:0.01351769, ACU_loss:47.98779948)
+epoch (2 / 50) (Loss:0.01585100, ACU_loss:56.27103582)
+epoch (3 / 50) (Loss:0.01405845, ACU_loss:49.90750586)
+epoch (4 / 50) (Loss:0.01521635, ACU_loss:54.01805367)
+epoch (5 / 50) (Loss:0.01782534, ACU_loss:63.27994691)
+epoch (6 / 50) (Loss:0.01559013, ACU_loss:55.34495613)
+epoch (7 / 50) (Loss:0.01929867, ACU_loss:68.51029293)
+epoch (8 / 50) (Loss:0.01898828, ACU_loss:67.40840592)
+epoch (9 / 50) (Loss:0.01710718, ACU_loss:60.73049357)
+epoch (10 / 50) (Loss:0.01399925, ACU_loss:49.69733626)
+epoch (11 / 50) (Loss:0.01686159, ACU_loss:59.85862976)
+epoch (12 / 50) (Loss:0.01954054, ACU_loss:69.36891399)
+epoch (13 / 50) (Loss:0.01799199, ACU_loss:63.87155506)
+epoch (14 / 50) (Loss:0.01629236, ACU_loss:57.83788383)
+epoch (15 / 50) (Loss:0.01703921, ACU_loss:60.48920882)
+1m 30s (- 0m 52s)
+=========================** Result **============================
+F1 score: 0.0031495648281038096
+AUC score: 0.6788707260251607

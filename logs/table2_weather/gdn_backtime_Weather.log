@@ -1,0 +1,32 @@
+shape of data: torch.Size([21, 1, 31617])
+shape of data: torch.Size([21, 1, 10540])
+shape of data: torch.Size([21, 1, 10540])
+[INFO] Exact checkpoint name not found; using closest glob match: ./checkpoints/transferlearning_attacker_Weather_cone_TgrGCN_hidden_dim=64_atklr=0.005_globalvslocalratio=-1_warmup=20_Autoformer_clean=False.pth
+[WARN] Multiple checkpoints matched the glob pattern, picked the first: ['./checkpoints/transferlearning_attacker_Weather_cone_TgrGCN_hidden_dim=64_atklr=0.005_globalvslocalratio=-1_warmup=20_Autoformer_clean=False.pth', './checkpoints/transferlearning_attacker_Weather_cone_TgrGCN_hidden_dim=64_atklr=0.005_globalvslocalratio=-1_warmup=20_Autoformer_clean=True.pth']
+shape of data: torch.Size([21, 1, 31617])
+/home/tanpham/maikhanh/HSATproject-main/defense_models/GDN/models/GDN.py:161: UserWarning: The use of `x.T` on tensors of dimension other than 2 to reverse their shape is deprecated and it will throw an error in a future release. Consider `x.mT` to transpose batches of matrices or `x.permute(*torch.arange(x.ndim - 1, -1, -1))` to reverse the dimensions of a tensor. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3614.)
+  gated_i = torch.arange(0, node_num).T.unsqueeze(1).repeat(1, topk_num).flatten().to(device).unsqueeze(0)
+epoch (0 / 50) (Loss:0.02069304, ACU_loss:73.46029579)
+epoch (1 / 50) (Loss:0.01649003, ACU_loss:58.53959901)
+epoch (2 / 50) (Loss:0.02038818, ACU_loss:72.37802514)
+epoch (3 / 50) (Loss:0.01900622, ACU_loss:67.47207119)
+epoch (4 / 50) (Loss:0.01710461, ACU_loss:60.72136051)
+epoch (5 / 50) (Loss:0.02050498, ACU_loss:72.79266481)
+epoch (6 / 50) (Loss:0.02454723, ACU_loss:87.14266064)
+epoch (7 / 50) (Loss:0.02295254, ACU_loss:81.48152485)
+epoch (8 / 50) (Loss:0.02307025, ACU_loss:81.89939838)
+epoch (9 / 50) (Loss:0.02260184, ACU_loss:80.23651896)
+epoch (10 / 50) (Loss:0.02376768, ACU_loss:84.37525223)
+epoch (11 / 50) (Loss:0.02301315, ACU_loss:81.69669599)
+epoch (12 / 50) (Loss:0.02207362, ACU_loss:78.36136685)
+epoch (13 / 50) (Loss:0.02262734, ACU_loss:80.32706431)
+epoch (14 / 50) (Loss:0.02952181, ACU_loss:104.80241595)
+epoch (15 / 50) (Loss:0.02221323, ACU_loss:78.85697627)
+epoch (16 / 50) (Loss:0.02171954, ACU_loss:77.10435019)
+epoch (17 / 50) (Loss:0.02155155, ACU_loss:76.50800855)
+epoch (18 / 50) (Loss:0.02101645, ACU_loss:74.60839636)
+epoch (19 / 50) (Loss:0.02037144, ACU_loss:72.31861545)
+1m 43s (- 1m 0s)
+=========================** Result **============================
+F1 score: 0.002255266680015597
+AUC score: 0.7283953911880312

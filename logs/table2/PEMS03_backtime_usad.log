@@ -1,0 +1,29 @@
+shape of data: torch.Size([358, 1, 15724])
+shape of data: torch.Size([358, 1, 5242])
+shape of data: torch.Size([358, 1, 5242])
+shape of data: torch.Size([358, 1, 15724])
+  0%|          | 0/100 [00:00<?, ?it/s]  0%|          | 0/100 [00:08<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/tanpham/maikhanh/HSATproject-main/run_usad_defense.py", line 546, in <module>
+    y_test, y_pred = main()
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/click/core.py", line 1569, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/click/core.py", line 1490, in main
+    rv = self.invoke(ctx)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/click/core.py", line 1353, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/click/core.py", line 907, in invoke
+    return callback(*args, **kwargs)
+  File "/home/tanpham/maikhanh/HSATproject-main/run_usad_defense.py", line 515, in main
+    history = training(N_EPOCHS,model,train_loader,val_loader,patience=10, alpha_loss1=alpha_loss1)
+  File "/home/tanpham/maikhanh/HSATproject-main/run_usad_defense.py", line 395, in training
+    optimizer2.step()
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/optim/optimizer.py", line 373, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/optim/optimizer.py", line 76, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/optim/adam.py", line 154, in step
+    self._init_group(
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/optim/adam.py", line 109, in _init_group
+    state['exp_avg'] = torch.zeros_like(p, memory_format=torch.preserve_format)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.69 GiB. GPU 0 has a total capacty of 39.50 GiB of which 37.56 MiB is free. Process 2303106 has 1.91 GiB memory in use. Process 2303183 has 2.02 GiB memory in use. Process 2303085 has 1.88 GiB memory in use. Process 2303381 has 3.10 GiB memory in use. Process 2303113 has 3.06 GiB memory in use. Including non-PyTorch memory, this process has 27.45 GiB memory in use. Of the allocated memory 26.55 GiB is allocated by PyTorch, and 389.44 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

@@ -1,0 +1,150 @@
+shape of data: torch.Size([358, 1, 15724])
+shape of data: torch.Size([358, 1, 5242])
+shape of data: torch.Size([358, 1, 5242])
+shape of data: torch.Size([358, 1, 15724])
+Model compiled with torch.compile for optimized GPU performance
+/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/utils.py:1397: UserWarning: The use of `x.T` on tensors of dimension other than 2 to reverse their shape is deprecated and it will throw an error in a future release. Consider `x.mT` to transpose batches of matrices or `x.permute(*torch.arange(x.ndim - 1, -1, -1))` to reverse the dimensions of a tensor. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3614.)
+  return node.target(*args, **kwargs)
+Traceback (most recent call last):
+  File "/home/tanpham/maikhanh/HSATproject-main/run_gdn_defense.py", line 529, in <module>
+    main()
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/click/core.py", line 1569, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/click/core.py", line 1490, in main
+    rv = self.invoke(ctx)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/click/core.py", line 1353, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/click/core.py", line 907, in invoke
+    return callback(*args, **kwargs)
+  File "/home/tanpham/maikhanh/HSATproject-main/run_gdn_defense.py", line 484, in main
+    train_log = train(model, save_model_path, 
+  File "/home/tanpham/maikhanh/HSATproject-main/defense_models/GDN/train.py", line 69, in train
+    out = model(x, edge_index).float().to(device)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py", line 328, in _fn
+    return fn(*args, **kwargs)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/tanpham/maikhanh/HSATproject-main/defense_models/GDN/models/GDN.py", line 139, in forward
+    self.cache_edge_index_sets[i] = get_batch_edge_index(edge_index, batch_num, node_num).to(device)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py", line 490, in catch_errors
+    return callback(frame, cache_entry, hooks, frame_state)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/convert_frame.py", line 641, in _convert_frame
+    result = inner_convert(frame, cache_size, hooks, frame_state)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/convert_frame.py", line 133, in _fn
+    return fn(*args, **kwargs)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/convert_frame.py", line 389, in _convert_frame_assert
+    return _compile(
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/convert_frame.py", line 569, in _compile
+    guarded_code = compile_inner(code, one_graph, hooks, transform)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/utils.py", line 189, in time_wrapper
+    r = func(*args, **kwargs)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/convert_frame.py", line 491, in compile_inner
+    out_code = transform_code_object(code, transform)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/bytecode_transformation.py", line 1028, in transform_code_object
+    transformations(instructions, code_options)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/convert_frame.py", line 458, in transform
+    tracer.run()
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/symbolic_convert.py", line 2069, in run
+    super().run()
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/symbolic_convert.py", line 719, in run
+    and self.step()
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/symbolic_convert.py", line 683, in step
+    getattr(self, inst.opname)(inst)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/symbolic_convert.py", line 2157, in RETURN_VALUE
+    self.output.compile_subgraph(
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/output_graph.py", line 833, in compile_subgraph
+    self.compile_and_call_fx_graph(tx, list(reversed(stack_values)), root)
+  File "/home/tanpham/.local/share/uv/python/cpython-3.10.14-linux-x86_64-gnu/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/output_graph.py", line 957, in compile_and_call_fx_graph
+    compiled_fn = self.call_user_compiler(gm)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/utils.py", line 189, in time_wrapper
+    r = func(*args, **kwargs)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/output_graph.py", line 1024, in call_user_compiler
+    raise BackendCompilerFailed(self.compiler_fn, e).with_traceback(
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/output_graph.py", line 1009, in call_user_compiler
+    compiled_fn = compiler_fn(gm, self.example_inputs())
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/repro/after_dynamo.py", line 117, in debug_wrapper
+    compiled_gm = compiler_fn(gm, example_inputs)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/__init__.py", line 1568, in __call__
+    return compile_fx(model_, inputs_, config_patches=self.config)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 961, in compile_fx
+    return compile_fx(
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 1150, in compile_fx
+    return aot_autograd(
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/backends/common.py", line 55, in compiler_fn
+    cg = aot_module_simplified(gm, example_inputs, **kwargs)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_functorch/aot_autograd.py", line 3891, in aot_module_simplified
+    compiled_fn = create_aot_dispatcher_function(
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/utils.py", line 189, in time_wrapper
+    r = func(*args, **kwargs)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_functorch/aot_autograd.py", line 3429, in create_aot_dispatcher_function
+    compiled_fn = compiler_fn(flat_fn, fake_flat_args, aot_config, fw_metadata=fw_metadata)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_functorch/aot_autograd.py", line 2212, in aot_wrapper_dedupe
+    return compiler_fn(flat_fn, leaf_flat_args, aot_config, fw_metadata=fw_metadata)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_functorch/aot_autograd.py", line 2392, in aot_wrapper_synthetic_base
+    return compiler_fn(flat_fn, flat_args, aot_config, fw_metadata=fw_metadata)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_functorch/aot_autograd.py", line 1573, in aot_dispatch_base
+    compiled_fw = compiler(fw_module, flat_args)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/utils.py", line 189, in time_wrapper
+    r = func(*args, **kwargs)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 1092, in fw_compiler_base
+    return inner_compile(
+  File "/home/tanpham/.local/share/uv/python/cpython-3.10.14-linux-x86_64-gnu/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/repro/after_aot.py", line 80, in debug_wrapper
+    inner_compiled_fn = compiler_fn(gm, example_inputs)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_inductor/debug.py", line 228, in inner
+    return fn(*args, **kwargs)
+  File "/home/tanpham/.local/share/uv/python/cpython-3.10.14-linux-x86_64-gnu/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 54, in newFunction
+    return old_func(*args, **kwargs)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 341, in compile_fx_inner
+    compiled_graph: CompiledFxGraph = fx_codegen_and_compile(
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 565, in fx_codegen_and_compile
+    compiled_fn = graph.compile_to_fn()
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_inductor/graph.py", line 970, in compile_to_fn
+    return self.compile_to_module().call
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/utils.py", line 189, in time_wrapper
+    r = func(*args, **kwargs)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_inductor/graph.py", line 938, in compile_to_module
+    code, linemap = self.codegen()
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_inductor/graph.py", line 915, in codegen
+    self.scheduler.codegen()
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_dynamo/utils.py", line 189, in time_wrapper
+    r = func(*args, **kwargs)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_inductor/scheduler.py", line 1690, in codegen
+    self.get_backend(device).codegen_nodes(node.get_nodes())
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_inductor/codegen/cpp.py", line 2805, in codegen_nodes
+    cpp_kernel_proxy = CppKernelProxy(kernel_group)
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_inductor/codegen/cpp.py", line 2352, in __init__
+    self.picked_vec_isa: codecache.VecISA = codecache.pick_vec_isa()
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_inductor/codecache.py", line 633, in pick_vec_isa
+    _valid_vec_isa_list: List[VecISA] = valid_vec_isa_list()
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_inductor/codecache.py", line 627, in valid_vec_isa_list
+    if str(isa) in _cpu_info_content and isa:
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_inductor/codecache.py", line 548, in __bool__
+    cpp_compile_command(
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_inductor/codecache.py", line 878, in cpp_compile_command
+    ipaths, lpaths, libs, macros = get_include_and_linking_paths(
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/_inductor/codecache.py", line 747, in get_include_and_linking_paths
+    from torch.utils import cpp_extension
+  File "/home/tanpham/maikhanh/HSATproject-main/.venv/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 28, in <module>
+    from pkg_resources import packaging  # type: ignore[attr-defined]
+torch._dynamo.exc.BackendCompilerFailed: backend='inductor' raised:
+ModuleNotFoundError: No module named 'pkg_resources'
+
+Set TORCH_LOGS="+dynamo" and TORCHDYNAMO_VERBOSE=1 for more information
+
+
+You can suppress this exception and fall back to eager by setting:
+    import torch._dynamo
+    torch._dynamo.config.suppress_errors = True
+
